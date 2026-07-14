@@ -1,0 +1,28 @@
+public class Main
+{
+    static int size=10;
+	static int[] table=new int[size];
+	public static void main(String[] args) {
+	    for(int i=0;i<size;i++){
+	        table[i]=-1;
+	    }
+	    insert(12);
+	    insert(22);
+	    insert(32);
+	    display();
+	
+	
+	}
+	static void insert(int key){
+	    int index=key%size;
+	    while(table[index]!=-1){
+	        index=(index+1)%size;
+	    }
+	    table[index]=key;
+	}
+	static void display(){
+	    for(int i=0;i<size;i++){
+	    System.out.println(i+"->"+table[i]);
+	    }
+	}
+}
